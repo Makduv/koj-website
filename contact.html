@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSP : restreint les scripts aux sources autorisées -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src https://fonts.gstatic.com https://cdn.jsdelivr.net; form-action https://formspree.io; connect-src https://formspree.io;" />
+  <title>Nous contacter — Kids of the Joy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+</head>
+<body>
+
+<div class="k5">
+
+  <!-- ── HEADER ── -->
+  <header class="k5-mast">
+    <div class="brand">
+      <a href="index.html" class="logo-slot s"><img src="img/logo.png" alt="Logo Kids of Joy" /></a>
+      <div class="b-text">
+        <div class="lg s">Kids of the Joy</div>
+        <div class="lg-sub s">Sénégal</div>
+      </div>
+    </div>
+    <div class="rg">
+      <nav>
+        <a href="histoire.html">L'histoire</a>
+        <a href="visages.html">Les visages</a>
+        <a href="cause.html">La cause</a>
+        <a href="albums.html">Albums</a>
+      </nav>
+      <a href="soutenir.html" class="cta">Nous soutenir →</a>
+      <span class="sep">|</span>
+      <a href="contact.html" class="mail-btn active"><i class="ti ti-mail" aria-label="Nous contacter"></i></a>
+      <div class="lang"><a href="index.html" class="active">FR</a><span style="color:#6B5F49">·</span><a href="#">EN</a></div>
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="k5-hero k5-hero--page">
+    <div class="k5-hero-left">
+      <span class="k5-ph-tag s">Une question · Un parrainage · Un partenariat</span>
+      <h1 class="s">Nous<br><em>Contacter</em></h1>
+      <p class="k5-ph-sub s">Notre équipe vous répondra dans les meilleurs délais.</p>
+    </div>
+    <div class="k5-hero-right">
+      <div class="k5-frame">
+        <img src="img/contact.png" alt="Kids of the Joy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RULE ── -->
+  <div class="k5-rule">
+    <span>Contact · Kids of the Joy</span>
+    <span>kidsofthejoy@gmail.com</span>
+  </div>
+
+  <!-- ── FORMULAIRE ── -->
+  <section class="k5-contact-section">
+
+    <div class="k5-contact-info">
+      <h2 class="k5-contact-info-title s">Coordonnées</h2>
+      <div class="k5-contact-info-item s">
+        <span class="k5-contact-info-label">E-mail</span>
+        <a href="mailto:kidsofthejoy@gmail.com">kidsofthejoy@gmail.com</a>
+      </div>
+      <div class="k5-contact-info-item s">
+        <span class="k5-contact-info-label">France</span>
+        <span>+33 6 71 89 98 86</span>
+      </div>
+      <div class="k5-contact-info-item s">
+        <span class="k5-contact-info-label">Sénégal</span>
+        <span>+221 77 420 49 77</span>
+      </div>
+    </div>
+
+    <div class="k5-contact-form-wrap">
+
+      <!-- Message de succès -->
+      <div id="contact-success" class="k5-form-feedback k5-form-success s" style="display:none">
+        <i class="ti ti-circle-check"></i>
+        <p>Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.</p>
+      </div>
+
+      <!-- Message d'erreur -->
+      <div id="contact-error" class="k5-form-feedback k5-form-error-msg s" style="display:none">
+        <i class="ti ti-alert-circle"></i>
+        <p>Une erreur est survenue. Merci de réessayer ou de nous contacter directement par e-mail.</p>
+      </div>
+
+      <!--
+        IMPORTANT : remplacer "VOTRE_ID_FORMSPREE" par votre vrai ID Formspree.
+        1. Créer un compte sur https://formspree.io
+        2. Créer un nouveau formulaire pour kidsofthejoy@gmail.com
+        3. Copier l'ID (ex: xwpbbkjr) et remplacer ci-dessous
+      -->
+      <form
+        id="contact-form"
+        class="k5-form"
+        action="https://formspree.io/f/VOTRE_ID_FORMSPREE"
+        method="POST"
+        novalidate
+        autocomplete="on">
+
+        <!-- Honeypot anti-bot (caché des humains) -->
+        <input
+          type="text"
+          name="_gotcha"
+          style="display:none!important"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true" />
+
+        <!-- Redirection après envoi (optionnel Formspree) -->
+        <input type="hidden" name="_next" value="" />
+
+        <div class="k5-form-row">
+          <div class="k5-form-field">
+            <label for="nom" class="k5-form-label s">Nom <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              class="k5-form-input s"
+              required
+              minlength="2"
+              maxlength="100"
+              autocomplete="family-name"
+              spellcheck="false"
+              placeholder=" " />
+            <span class="k5-field-error s" aria-live="polite">Veuillez entrer votre nom (2 caractères min.).</span>
+          </div>
+
+          <div class="k5-form-field">
+            <label for="prenom" class="k5-form-label s">Prénom <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="prenom"
+              name="prenom"
+              class="k5-form-input s"
+              required
+              minlength="2"
+              maxlength="100"
+              autocomplete="given-name"
+              spellcheck="false"
+              placeholder=" " />
+            <span class="k5-field-error s" aria-live="polite">Veuillez entrer votre prénom (2 caractères min.).</span>
+          </div>
+        </div>
+
+        <div class="k5-form-field">
+          <label for="email" class="k5-form-label s">Adresse e-mail <span aria-hidden="true">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="k5-form-input s"
+            required
+            maxlength="254"
+            autocomplete="email"
+            spellcheck="false"
+            placeholder=" " />
+          <span class="k5-field-error s" aria-live="polite">Veuillez entrer une adresse e-mail valide.</span>
+        </div>
+
+        <div class="k5-form-field">
+          <label for="message" class="k5-form-label s">Message <span aria-hidden="true">*</span></label>
+          <textarea
+            id="message"
+            name="message"
+            class="k5-form-input k5-form-textarea s"
+            required
+            minlength="10"
+            maxlength="2000"
+            rows="6"
+            spellcheck="true"
+            placeholder=" "></textarea>
+          <span class="k5-field-error s" aria-live="polite">Veuillez entrer votre message (10 caractères min.).</span>
+          <span class="k5-form-counter s" aria-live="polite" id="msg-counter">0 / 2000</span>
+        </div>
+
+        <div class="k5-form-footer">
+          <p class="k5-form-required-note s">* Tous les champs sont obligatoires.</p>
+          <button type="submit" class="k5-form-btn" id="submit-btn">
+            <span class="btn-label s">Envoyer →</span>
+            <span class="btn-sending s" style="display:none" aria-live="polite">Envoi en cours…</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </section>
+
+  <div class="k5-frise">
+    <img src="img/frise6.png" alt="Frise Kids of the Joy" />
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="k5-foot">
+    <div class="k5-foot-top">
+      <div>
+        <div class="lgf s">Kids of the Joy</div>
+        <div class="lgf-sub s">L'association qui accompagne les enfants vers un avenir radieux.</div>
+      </div>
+      <div>
+        <h4>L'association</h4>
+        <a href="histoire.html">L'histoire</a>
+        <a href="visages.html#equipe">L'équipe KOJ</a>
+        <a href="visages.html#encadrants">Les encadrants</a>
+        <a href="visages.html#enfants">Les enfants</a>
+      </div>
+      <div>
+        <h4>La cause</h4>
+        <a href="cause.html#contribution">Votre contribution</a>
+        <a href="cause.html#parrains">Les parrains-marraines</a>
+      </div>
+      <div>
+        <h4>Albums</h4>
+        <a href="albums.html">Tous les albums</a>
+        <a href="albums.html">Moments choisis</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:kidsofthejoy@gmail.com">kidsofthejoy@gmail.com</a>
+        <p>FR +33 6 71 89 98 86</p>
+        <p>SN +221 77 420 49 77</p>
+      </div>
+    </div>
+    <div class="k5-foot-bot">
+      <span>© 2026 Kids of the Joy</span>
+      <span>Association d'aide aux enfants</span>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+document.documentElement.style.scrollBehavior = 'smooth';
+
+(function() {
+  'use strict';
+
+  const form    = document.getElementById('contact-form');
+  const success = document.getElementById('contact-success');
+  const errMsg  = document.getElementById('contact-error');
+  const counter = document.getElementById('msg-counter');
+  const msgArea = document.getElementById('message');
+  const submitBtn = document.getElementById('submit-btn');
+
+  if (!form) return;
+
+  // ── Compteur de caractères ──
+  if (msgArea && counter) {
+    msgArea.addEventListener('input', function() {
+      const len = msgArea.value.length;
+      counter.textContent = len + ' / 2000';
+      counter.style.color = len > 1800 ? 'var(--terracotta)' : '';
+    });
+  }
+
+  // ── Validation email stricte ──
+  function isValidEmail(val) {
+    return /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(val.trim());
+  }
+
+  // ── Valider un champ individuel ──
+  function validateField(field) {
+    const errorEl = field.parentElement.querySelector('.k5-field-error');
+    let ok = field.validity.valid;
+
+    if (field.id === 'email') ok = ok && isValidEmail(field.value);
+    if (field.id === 'message') ok = ok && field.value.trim().length >= 10;
+    if (field.id === 'nom' || field.id === 'prenom') ok = ok && field.value.trim().length >= 2;
+
+    field.setAttribute('aria-invalid', ok ? 'false' : 'true');
+    field.classList.toggle('k5-field-invalid', !ok);
+    if (errorEl) errorEl.style.display = ok ? 'none' : 'block';
+    return ok;
+  }
+
+  // ── Validation au blur ──
+  form.querySelectorAll('.k5-form-input').forEach(function(field) {
+    field.addEventListener('blur', function() { validateField(field); });
+    field.addEventListener('input', function() {
+      if (field.classList.contains('k5-field-invalid')) validateField(field);
+    });
+  });
+
+  // ── Soumission ──
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Honeypot check
+    const honeypot = form.querySelector('input[name="_gotcha"]');
+    if (honeypot && honeypot.value.trim() !== '') return;
+
+    // Valider tous les champs
+    const fields = [...form.querySelectorAll('.k5-form-input')];
+    const allValid = fields.every(function(f) { return validateField(f); });
+    if (!allValid) {
+      const firstInvalid = form.querySelector('.k5-field-invalid');
+      if (firstInvalid) firstInvalid.focus();
+      return;
+    }
+
+    // Désactiver le bouton
+    submitBtn.disabled = true;
+    submitBtn.querySelector('.btn-label').style.display  = 'none';
+    submitBtn.querySelector('.btn-sending').style.display = 'inline';
+    errMsg.style.display = 'none';
+
+    // Envoi via Formspree
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(res) {
+      if (res.ok) {
+        form.style.display     = 'none';
+        success.style.display  = 'flex';
+      } else {
+        throw new Error('server');
+      }
+    })
+    .catch(function() {
+      submitBtn.disabled = false;
+      submitBtn.querySelector('.btn-label').style.display  = 'inline';
+      submitBtn.querySelector('.btn-sending').style.display = 'none';
+      errMsg.style.display = 'flex';
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
